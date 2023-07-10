@@ -4,6 +4,8 @@
 
 int main()
 {
+	srand(time(0));
+
 	showConsoleCursor(false); // 화면의 콘솔 커서 끄기
 
 	// clock() 프로그램 시작부터 함수가 실행된 시점의 시간을 구한다. CLOCKS_PER_SEC 는 보통 1000 이다.
@@ -12,6 +14,7 @@ int main()
 	Display* DisPlay = new Display;
 
 	GameEngine* GameManger = new GameEngine;
+	GameManger->Init(); // 게임 초기 설정
 
 	while (true)
 	{
@@ -30,23 +33,37 @@ int main()
 
 		bool left = keyState('a');
 		bool right = keyState('d');
+		bool down = keyState('s');
+		bool rotate = keyState('w');
 
 		if (left) // 이 조건문 자체를 bool 을 파라미터 값으로 받는 함수로 변경하기
 		{
 			// 왼쪽으로 블럭 이동
+			GameManger->Next(deltatime,'a');
+		}
+		else if (right)
+		{
+			GameManger->Next(deltatime, 'd');
+		}
+		else if (down)
+		{
+			GameManger->Next(deltatime, 's');
+		}
+		else if (rotate)
+		{
+			GameManger->Next(deltatime, 'w');
 		}
 		else
 		{
 			// 이동하지 않고 그냥 떨어지게
+			GameManger->Next(deltatime, 0);
 		}
-
-		GameManger->Next(deltatime, 0);
 
 		// 화면 출력
 		GameManger->MakeDisplayData();
 		DisPlay->draw();
 
 		// 게임 상태 판별
-
+		if (GameManger->CurrentState == GameState::GAMEOVER) break;
 	}
 }
