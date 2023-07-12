@@ -31,8 +31,8 @@ enum class GameState
 class Display // 화면 출력 담당 클래스
 {
 public:
-	Display();
-	~Display();
+	Display() {}
+	~Display() {}
 
 	void draw()
 	{
@@ -47,15 +47,6 @@ public:
 	}
 private:
 };
-
-Display::Display()
-{
-}
-
-Display::~Display()
-{
-}
-
 
 class GameEngine // 유저 그리드(생성된 블럭)을 관리하고 Display 에 정보를 전달
 {
