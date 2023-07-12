@@ -27,6 +27,9 @@
     <ClCompile Include="TetrisPlayer.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="TetrisInfoHeader.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TetrisHelper.h">
@@ -42,6 +45,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="TetrisPlayer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TetrisInfoHeader.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

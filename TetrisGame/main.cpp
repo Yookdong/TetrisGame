@@ -1,9 +1,11 @@
-﻿#include "Header.h"
+﻿//#include "Header.h"
+#include <iostream>
 
 #define INTERVAL 1.0/60.0 // 60FPS 기준으로 한 것
 
 int main()
 {
+	/*
 	srand(time(0));
 
 	showConsoleCursor(false); // 화면의 콘솔 커서 끄기
@@ -66,4 +68,5 @@ int main()
 		// 게임 상태 판별
 		if (GameManger->CurrentState == GameState::GAMEOVER) break;
 	}
+	*/
 }

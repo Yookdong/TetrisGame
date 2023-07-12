@@ -57,7 +57,7 @@ public:
 	GameState CurrentState = GameState::GAMEPLAY;
 
 	int GameGridData[GRID_HEIGHT][GRID_WIDTH] = { 0, };
-	int UseBlock[USERBLOCK_SIZE][USERBLOCK_SIZE] = { {0,0,1},{0,0,1},{0,0,1} };
+	int UseBlock[USERBLOCK_SIZE][USERBLOCK_SIZE] = { 0, };
 
 	int UserBlockVarious[3][USERBLOCK_SIZE][USERBLOCK_SIZE] = { { {0,1,0},{0,1,0},{0,1,0} },
 		{ {0,0,0},{0,1,1},{0,1,1} }, { {0,0,0},{0,1,0},{1,1,1} } };
